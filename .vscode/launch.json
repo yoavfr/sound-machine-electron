@@ -20,8 +20,7 @@
           "type": "chrome",
           "request": "attach",
           "port": 9223,
-          "webRoot": "${workspaceFolder}",
-          "timeout": 30000
+          "webRoot": "${workspaceFolder}/dist/renderer"
       }
   ],
   "compounds": [

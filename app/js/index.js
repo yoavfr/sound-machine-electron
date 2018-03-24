@@ -4,7 +4,7 @@ var ipc = require('electron').ipcRenderer;
 var remote = require('electron').remote;
 var Tray = remote.require('electron').Tray;
 var Menu = remote.require('electron').Menu;
-var path = require('electron').path;
+var path = require('path');
 
 var soundButtons = document.querySelectorAll('.button-sound');
 var closeEl = document.querySelector('.close');
@@ -38,9 +38,9 @@ settingsEl.addEventListener('click', function () {
     ipc.send('open-settings-window');
 });
 
-ipc.on('global-shortcut', function (arg) {
+ipc.on('global-shortcut', function (arg, val) {
     var event = new MouseEvent('click');
-    soundButtons[arg].dispatchEvent(event);
+    soundButtons[val].dispatchEvent(event);
 });
 
 if (process.platform === 'darwin') {
