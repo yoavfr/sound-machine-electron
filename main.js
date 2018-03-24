@@ -56,7 +56,7 @@ ipc.on('open-settings-window', function () {
         width: 200
     });
 
-    settingsWindow.loadUrl('file://' + __dirname + '/app/settings.html');
+    settingsWindow.loadURL('file://' + __dirname + '/app/settings.html');
 
     settingsWindow.on('closed', function () {
         settingsWindow = null;
