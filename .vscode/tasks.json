@@ -1,0 +1,20 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "electron",
+            "type": "shell",
+            "command": "node_modules/electron-prebuilt/dist/electron.exe",
+            "args": [
+                "app/main.js",
+                "--debug=9229"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
